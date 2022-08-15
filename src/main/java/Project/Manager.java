@@ -33,11 +33,11 @@ public class Manager {
             enterAddCustomer.click();
 
     WebElement firstName=this.driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > div:nth-child(1) > input"));
-            firstName.sendKeys("lee");
+            firstName.sendKeys("Bruce");
     WebElement lastName=this.driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > div:nth-child(2) > input"));
-            lastName.sendKeys("l6l");
+            lastName.sendKeys("Lee");
     WebElement postCode=driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > div:nth-child(3) > input"));
-            postCode.sendKeys("688");
+            postCode.sendKeys("123456");
 
     WebElement add =this.driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > button"));
            add.click();
@@ -45,7 +45,7 @@ public class Manager {
     WebElement customer=this.driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/button[3]"));
         customer.sendKeys(Keys.ENTER);
         WebElement search=this.driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > form > div > div > input"));
-        search.sendKeys("lee");
+        search.sendKeys("Bruce");
         WebElement checkSeatch=this.driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[2]/div/div/table/tbody/tr/td[1]"));
         return checkSeatch.getText();}
     public void quit(){
