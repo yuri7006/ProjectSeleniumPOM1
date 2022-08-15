@@ -18,10 +18,7 @@ public class TestProject {
            System.out.println("test customer in system - pass");
 
         customer1.quit();
-
        }
-
-
           @Test
             public void testCustomer() throws InterruptedException {
                 LoginCustomer customer2 = new LoginCustomer();
@@ -29,13 +26,13 @@ public class TestProject {
                 customer2.customerLogin();
                 customer2.userSelect();
 
-                var expected = "1000";
-                var actual = customer2.deposit();
+                var expected = 1000;
+                var actual = Integer.parseInt(customer2.deposit());
                 Assert.assertEquals(actual, expected);
                 System.out.println("deposit account 1000- pass");
 
-                var expexted1 = "750";
-                var actual1 = customer2.withdrawl();
+                var expexted1= 750;
+                var actual1 = Integer.parseInt(customer2.withdrawl());
                 Assert.assertEquals(actual1, expexted1);
                 System.out.println("test balance account 750- pass");
                 customer2.quit();
