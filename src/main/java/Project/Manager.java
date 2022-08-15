@@ -41,7 +41,7 @@ public class Manager {
 
     WebElement add =this.driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > button"));
            add.click();
-        Thread.sleep(5000);
+        Thread.sleep(7000);
     WebElement customer=this.driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/button[3]"));
         customer.sendKeys(Keys.ENTER);
         WebElement search=this.driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > form > div > div > input"));
