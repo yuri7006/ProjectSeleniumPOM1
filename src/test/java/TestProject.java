@@ -12,7 +12,7 @@ public class TestProject {
            Manager customer1 = new Manager();
            customer1.openSite("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login");
 
-           var expected = "lee";
+           var expected = "Bruce";
            var actual = customer1.loginManager();
            Assert.assertEquals(expected,actual);
            System.out.println("test customer in system - pass");
