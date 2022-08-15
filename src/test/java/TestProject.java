@@ -4,8 +4,24 @@ import Project.Manager;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestProject {
+import static io.restassured.RestAssured.given;
 
+public class TestProject {
+    @Test
+    public void testuUrl(){
+        var statusacaode =given().
+                when().
+                get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login").
+                getStatusCode();
+
+        int code= statusacaode/100;
+        System.out.println(code);
+        switch (code) {
+            case 2 -> System.out.println("pass");
+            case 3 -> System.out.println("redirection");
+            case 4 -> System.out.println("user error");
+            case 5 -> System.out.println("system error");
+        }}
 
        @Test
               public void TestManager() throws InterruptedException {
@@ -36,7 +52,8 @@ public class TestProject {
                 Assert.assertEquals(actual1, expexted1);
                 System.out.println("test balance account 750- pass");
                 customer2.quit();
-            }}
+            }
+    }
 
 
 
