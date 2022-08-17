@@ -9,19 +9,20 @@ import static io.restassured.RestAssured.given;
 public class TestProject {
     @Test
     public void testuUrl(){
-        var statusacaode =given().
+        var statusaCode =given().
                 when().
                 get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login").
                 getStatusCode();
 
-        int code= statusacaode/100;
+        int code= statusaCode/100;
         System.out.println(code);
         switch (code) {
             case 2 -> System.out.println("pass");
             case 3 -> System.out.println("redirection");
             case 4 -> System.out.println("user error");
-            case 5 -> System.out.println("system error");
-        }}
+            case 5 -> System.out.println("api error");}
+            Assert.assertEquals(code,2);
+        }
 
        @Test
               public void TestManager() throws InterruptedException {
